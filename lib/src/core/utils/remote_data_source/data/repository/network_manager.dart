@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:case_voco/src/core/entities/error_response_model.dart';
 import 'package:case_voco/src/core/error/failure/failure.dart';
 import 'package:case_voco/src/core/error/failure/network_failure.dart';
-import 'package:case_voco/src/core/utils/remote_data_source/domain/entites/main_endpoint.dart';
+import 'package:case_voco/src/core/utils/remote_data_source/domain/entites/main_endpoints.dart';
 import 'package:case_voco/src/core/utils/remote_data_source/domain/repository/i_network_manager.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -12,10 +12,10 @@ class NetworkManager extends INetworkManager {
   NetworkManager(super.dio);
 
   @override
-  Future<Either<Failure, String>> baseGet({
-    required MainEndpoints endPoint,
-    Map<String, dynamic>? queryParameters,
-  }) async {
+  Future<Either<Failure, String>> baseGet(
+      {required MainEndpoints endPoint,
+      Map<String, dynamic>? queryParameters,
+      Map<String, dynamic>? requestBody}) async {
     return await _errorHandler(
       dio.get(
         endPoint.path,

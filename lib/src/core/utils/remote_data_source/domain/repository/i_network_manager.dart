@@ -1,4 +1,4 @@
-import 'package:case_voco/src/core/utils/remote_data_source/domain/entites/main_endpoint.dart';
+import 'package:case_voco/src/core/utils/remote_data_source/domain/entites/main_endpoints.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import '../../../../error/failure/failure.dart';
@@ -11,6 +11,7 @@ abstract class INetworkManager {
   Future<Either<Failure, String>> baseGet({
     required MainEndpoints endPoint,
     Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? requestBody,
   });
 
   Future<Either<Failure, String>> basePost({

@@ -4,8 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future<void> controllerModule() async {
   loginController = Provider.autoDispose((ref) => LoginController(ref));
-  // homeController = Provider.autoDispose((ref) => HomeController(ref));
+  homeController = Provider.autoDispose((ref) => HomeController(ref));
 }
 
 late final AutoDisposeProvider<LoginController> loginController;
-// late final AutoDisposeProvider<HomeController> homeController;
+late final AutoDisposeProvider<HomeController> homeController;

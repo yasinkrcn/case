@@ -14,8 +14,6 @@ class AppConstants {
 
   static const String appName = "voco case";
 
-  static const String image = "https://image.hurimg.com/i/hurriyet/75/750x422/6500af144e3fe02d1823703a.jpg";
-
   ///Request atacağımız baseUrl
   static const String baseUrl = "https://reqres.in/";
 }

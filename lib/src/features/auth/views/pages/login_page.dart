@@ -5,8 +5,6 @@ import 'package:case_voco/src/core/shared/app_scaffold.dart';
 import 'package:case_voco/src/core/shared/app_text.dart';
 import 'package:case_voco/src/core/shared/app_text_form_field.dart';
 import 'package:case_voco/src/core/utils/modules/controller_module.dart';
-import 'package:case_voco/src/features/auth/controllers/login_controller.dart';
-import 'package:case_voco/src/features/auth/controllers/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -38,10 +36,9 @@ class LoginPage extends ConsumerWidget {
               ),
               16.height,
               AppButton.standart(
-                  onTap: () {
-                    ref.read(loginController).login();
-                  },
-                  buttonText: "Login")
+                onTap: () => ref.read(loginController).login(),
+                buttonText: "Login",
+              )
             ],
           ),
         ),

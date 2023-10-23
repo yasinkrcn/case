@@ -5,8 +5,7 @@ import 'package:case_voco/src/core/utils/modules/controller_module.dart';
 import 'package:case_voco/src/core/utils/modules/network_module.dart';
 import 'package:case_voco/src/core/utils/modules/service_module.dart';
 import 'package:case_voco/src/core/utils/route/router.dart';
-import 'package:case_voco/src/features/auth/views/pages/login_page.dart';
-import 'package:case_voco/src/features/home/views/pages/home_page.dart';
+import 'package:case_voco/src/features/auth/views/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.themeData,
       navigatorKey: GlobalContextKey.instance.globalKey,
       onGenerateRoute: generateRoute,
-      home: LoginPage(),
+      home: const SplashPage(),
     );
   }
 }
