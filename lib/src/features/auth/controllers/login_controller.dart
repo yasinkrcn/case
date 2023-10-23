@@ -31,6 +31,8 @@ class LoginController {
 
       ref.read(token.notifier).update((state) => data.token!);
 
+      ref.read(homeController).fetchUsers();
+
       RouteManager.to.pageAndRemoveUntil(PageRoutes.homePage);
       showCustomMessenger(CustomMessengerState.SUCCESS, "Giriş Başarılı");
     });
